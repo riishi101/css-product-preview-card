@@ -1,0 +1,107 @@
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --lightCyan: hsl(158, 58%, 19%);
+
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --shadow: rgba(0, 0, 0, 0.15);
+  --black: #333;
+
+  --ft-Montserrat: "Montserrat", sans-serif;
+  --ft-Fraunces: "Fraunces", serif;
+}
+
+/* started */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  border: none;
+}
+
+/* general */
+body {
+  font-family: var(--ft-Montserrat);
+  line-height: 1.1;
+  background-color: var(--cream);
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+}
+.content-preview {
+  color: var(--black);
+  width: min(600px, 90%);
+  background-color: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+@media (min-width: 620px) {
+  .content-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.content-img img {
+  height: 100%;
+}
+@media (min-width: 620px) {
+  .content-img img {
+    content: url(images/image-product-desktop.jpg);
+  }
+}
+
+.content-details {
+  padding: 1rem 2rem;
+}
+.product-name {
+  margin: 0.5rem 0;
+}
+h1 {
+  line-height: 1.1;
+  font-family: var(--ft-Fraunces);
+  margin-bottom: 1rem;
+}
+.product-description {
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+.product-price {
+  margin-bottom: 1rem;
+}
+.product-price .sale-price {
+  font-size: 2rem;
+  font-family: var(--ft-Fraunces);
+  color: var(--darkCyan);
+}
+.product-price .original-price {
+  margin-left: 1rem;
+  vertical-align: super;
+  text-decoration: line-through;
+}
+button {
+  background-color: var(--darkCyan);
+  color: var(--white);
+  width: 100%;
+  font-weight: 700;
+  border-radius: 7px;
+  padding: 0.9rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+button:hover {
+  background-color: var(--lightCyan);
+}
